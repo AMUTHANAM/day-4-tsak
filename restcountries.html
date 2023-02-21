@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var fetchdata = new XMLHttpRequest()
+         //console.log(fetchdata)
+         fetchdata.open ('Get',c)
+         fetchdata.send()
+        fetchdata.onload=function(){
+          
+           var api = JSON.parse(fetchdata.response)
+        
+
+           api.forEach(element => {
+
+          
+            console.log(element.area)
+            console.log(element.region)
+            console.log(element.population)
+            console.log(element.subregion)
+           });
+         
+         
+        }
+
+    </script>
+</body>
+</html>
